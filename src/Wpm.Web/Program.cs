@@ -6,9 +6,16 @@ using Wpm.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var initialScopes = builder.Configuration["MicrosoftGraph:Scopes"]?.Split(' ');
+
 // Add services to the container.
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-            .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+            .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))
+            .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)
+            .AddMicrosoftGraph(builder.Configuration.GetSection("MicrosoftGraph"))
+            .AddInMemoryTokenCaches();
+
+
 builder.Services.AddRazorPages()
     .AddMicrosoftIdentityUI();
 builder.Services.AddWpmDb(builder.Configuration);
