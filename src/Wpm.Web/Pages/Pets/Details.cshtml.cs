@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Wpm.Web.Dal;
@@ -5,6 +6,7 @@ using Wpm.Web.Domain;
 
 namespace Wpm.Web.Pages.Pets;
 
+[Authorize]
 public class DetailsModel : PageModel
 {
     private readonly WpmDbContext dbContext;
