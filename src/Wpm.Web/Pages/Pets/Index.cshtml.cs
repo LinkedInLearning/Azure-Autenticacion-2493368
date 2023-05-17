@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using Wpm.Web.Domain;
 
 namespace Wpm.Web.Pages.Pets;
 
+[Authorize]
 public class IndexModel : PageModel
 {
     private readonly WpmDbContext dbContext;
