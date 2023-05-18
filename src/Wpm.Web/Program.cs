@@ -1,10 +1,18 @@
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.UI;
 using Wpm.Web.Dal;
 using Wpm.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services
+    .AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddRazorPages()
+                .AddMicrosoftIdentityUI();
 builder.Services.AddWpmDb(builder.Configuration);
 builder.Services.AddSingleton<StorageService>();
 
@@ -23,7 +31,9 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapRazorPages();
+app.MapControllers();
 
 app.Run();
