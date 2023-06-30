@@ -2,8 +2,8 @@
 
 Este es el repositorio del curso de LinkedIn Learning `Azure: Autenticación`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![Nombre completo del curso][lil-thumbnail-url] 
-
+![image](https://github.com/LinkedInLearning/Azure-Autenticacion-2493368/assets/71371373/3797beb6-1e3e-4c39-8670-790f4366471e)
+ 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
 Adéntrate en el mundo de la autenticación en Azure con este curso enfocado en los fundamentos de la plataforma de identidad para autenticación y autorización e implementación en soluciones de software. Dirigido a desarrolladores y arquitectos de software, aprenderás a integrar Azure AD en tus sistemas. Inicia con la plataforma de identidad de Microsoft y Azure Active Directory, para luego aplicar estos conceptos en una aplicación web mediante un ejemplo práctico basado en la empresa ficticia Wisdom Pet Medicine.
@@ -31,7 +31,7 @@ Las ramas están estructuradas para corresponder a los vídeos del curso. La con
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/rodrigo-diaz-concha).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com
+[lil-course-url]: https://www.linkedin.com/learning/azure-autenticacion/autenticacion-en-azure
 [lil-thumbnail-url]: https:
 
 [1]: # (End of ES-Instruction ###############################################################################################)
